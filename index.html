@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Sudoku</title>
+</head>
+<body>
+    
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="l">
+                <div class="o b11 n1" onclick="choose(1,1)"></div>
+                <div class="o b21 n1" onclick="choose(2,1)"></div>
+                <div class="o b31 n1" onclick="choose(3,1)"></div>
+                <div class="o b12 n1" onclick="choose(1,2)"></div>
+                <div class="o b22 n1" onclick="choose(2,2)"></div>
+                <div class="o b32 n1" onclick="choose(3,2)"></div>
+                <div class="o b13 n1" onclick="choose(1,3)"></div>
+                <div class="o b23 n1" onclick="choose(2,3)"></div>
+                <div class="o b33 n1" onclick="choose(3,3)"></div>
+            </td>
+            <td class="l">
+                <div class="o b41 n2" onclick="choose(4,1)"></div>
+                <div class="o b51 n2" onclick="choose(5,1)"></div>
+                <div class="o b61 n2" onclick="choose(6,1)"></div>
+                <div class="o b42 n2" onclick="choose(4,2)"></div>
+                <div class="o b52 n2" onclick="choose(5,2)"></div>
+                <div class="o b62 n2" onclick="choose(6,2)"></div>
+                <div class="o b43 n2" onclick="choose(4,3)"></div>
+                <div class="o b53 n2" onclick="choose(5,3)"></div>
+                <div class="o b63 n2" onclick="choose(6,3)"></div>
+            </td>
+            <td class="l">
+                <div class="o b71 n3" onclick="choose(7,1)"></div>
+                <div class="o b81 n3" onclick="choose(8,1)"></div>
+                <div class="o b91 n3" onclick="choose(9,1)"></div>
+                <div class="o b72 n3" onclick="choose(7,2)"></div>
+                <div class="o b82 n3" onclick="choose(8,2)"></div>
+                <div class="o b92 n3" onclick="choose(9,2)"></div>
+                <div class="o b73 n3" onclick="choose(7,3)"></div>
+                <div class="o b83 n3" onclick="choose(8,3)"></div>
+                <div class="o b93 n3" onclick="choose(9,3)"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="l">
+                <div class="o b14 n4" onclick="choose(1,4)"></div>
+                <div class="o b24 n4" onclick="choose(2,4)"></div>
+                <div class="o b34 n4" onclick="choose(3,4)"></div>
+                <div class="o b15 n4" onclick="choose(1,5)"></div>
+                <div class="o b25 n4" onclick="choose(2,5)"></div>
+                <div class="o b35 n4" onclick="choose(3,5)"></div>
+                <div class="o b16 n4" onclick="choose(1,6)"></div>
+                <div class="o b26 n4" onclick="choose(2,6)"></div>
+                <div class="o b36 n4" onclick="choose(3,6)"></div>
+            </td>
+            <td class="l">
+                <div class="o b44 n5" onclick="choose(4,4)"></div>
+                <div class="o b54 n5" onclick="choose(5,4)"></div>
+                <div class="o b64 n5" onclick="choose(6,4)"></div>
+                <div class="o b45 n5" onclick="choose(4,5)"></div>
+                <div class="o b55 n5" onclick="choose(5,5)"></div>
+                <div class="o b65 n5" onclick="choose(6,5)"></div>
+                <div class="o b46 n5" onclick="choose(4,6)"></div>
+                <div class="o b56 n5" onclick="choose(5,6)"></div>
+                <div class="o b66 n5" onclick="choose(6,6)"></div>
+            </td>
+            <td class="l">
+                <div class="o b74 n6" onclick="choose(7,4)"></div>
+                <div class="o b84 n6" onclick="choose(8,4)"></div>
+                <div class="o b94 n6" onclick="choose(9,4)"></div>
+                <div class="o b75 n6" onclick="choose(7,5)"></div>
+                <div class="o b85 n6" onclick="choose(8,5)"></div>
+                <div class="o b95 n6" onclick="choose(9,5)"></div>
+                <div class="o b76 n6" onclick="choose(7,6)"></div>
+                <div class="o b86 n6" onclick="choose(8,6)"></div>
+                <div class="o b96 n6" onclick="choose(9,6)"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="l">
+                <div class="o b17 n7" onclick="choose(1,7)"></div>
+                <div class="o b27 n7" onclick="choose(2,7)"></div>
+                <div class="o b37 n7" onclick="choose(3,7)"></div>
+                <div class="o b18 n7" onclick="choose(1,8)"></div>
+                <div class="o b28 n7" onclick="choose(2,8)"></div>
+                <div class="o b38 n7" onclick="choose(3,8)"></div>
+                <div class="o b19 n7" onclick="choose(1,9)"></div>
+                <div class="o b29 n7" onclick="choose(2,9)"></div>
+                <div class="o b39 n7" onclick="choose(3,9)"></div>
+            </td>
+            <td class=" l">
+                <div class="o b47 n8" onclick="choose(4,7)"></div>
+                <div class="o b57 n8" onclick="choose(5,7)"></div>
+                <div class="o b67 n8" onclick="choose(6,7)"></div>
+                <div class="o b48 n8" onclick="choose(4,8)"></div>
+                <div class="o b58 n8" onclick="choose(5,8)"></div>
+                <div class="o b68 n8" onclick="choose(6,8)"></div>
+                <div class="o b49 n8" onclick="choose(4,9)"></div>
+                <div class="o b59 n8" onclick="choose(5,9)"></div>
+                <div class="o b69 n8" onclick="choose(6,9)"></div>
+            </td>
+            <td class="l">
+                <div class="o b77 n9" onclick="choose(7,7)"></div>
+                <div class="o b87 n9" onclick="choose(8,7)"></div>
+                <div class="o b97 n9" onclick="choose(9,7)"></div>
+                <div class="o b78 n9" onclick="choose(7,8)"></div>
+                <div class="o b88 n9" onclick="choose(8,8)"></div>
+                <div class="o b98 n9" onclick="choose(9,8)"></div>
+                <div class="o b79 n9" onclick="choose(7,9)"></div>
+                <div class="o b89 n9" onclick="choose(8,9)"></div>
+                <div class="o b99 n9" onclick="choose(9,9)"></div>
+            </td>
+        </tr>
+    </table>
+    <!--  -->
+    <br>
+    <table border="1" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="bt" onclick="cl(1)">1</td>
+            <td class="bt" onclick="cl(2)">2</td>
+            <td class="bt" onclick="cl(3)">3</td>
+            <td class="bt" onclick="cl(4)">4</td>
+            <td class="bt" onclick="cl(5)">5</td>
+            <td class="bt" onclick="cl(6)">6</td>
+            <td class="bt" onclick="cl(7)">7</td>
+            <td class="bt" onclick="cl(8)">8</td>
+            <td class="bt" onclick="cl(9)">9</td>
+        </tr>
+    </table>
+    <br>
+
+    <div class="bts">
+        <button class="sl" onclick="clr()">NEW</button>
+        <button class="sl" onclick="del()">DEL</button>
+        <button class="sl" onclick="sol()">Sol</button>
+    </div>
+    <!--  -->
+    <script src="jQuery v3.4.1.js"></script>
+    <script src="index.js"></script>
+    <script src="control.js"></script>
+</body>
+</html>
